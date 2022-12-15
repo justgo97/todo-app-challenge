@@ -1,0 +1,385 @@
+/*
+
+### Light Theme
+
+- Very Light Gray: hsl(0, 0%, 98%)
+- Very Light Grayish Blue: hsl(236, 33%, 92%)
+- Light Grayish Blue: hsl(233, 11%, 84%)
+- Dark Grayish Blue: hsl(236, 9%, 61%)
+- Very Dark Grayish Blue: hsl(235, 19%, 35%)
+
+### Dark Theme
+
+- Very Dark Blue: hsl(235, 21%, 11%)
+- Very Dark Desaturated Blue: hsl(235, 24%, 19%)
+- Light Grayish Blue: hsl(234, 39%, 85%)
+- Light Grayish Blue (hover): hsl(236, 33%, 92%)
+- Dark Grayish Blue: hsl(234, 11%, 52%)
+- Very Dark Grayish Blue: hsl(233, 14%, 35%)
+- Very Dark Grayish Blue: hsl(237, 14%, 26%)
+
+*/
+
+$veryLightGray: hsl(0, 0%, 98%);
+$veryLightGrayishBlue: hsl(236, 33%, 92%);
+
+$brightBlue: hsl(220, 98%, 61%);
+$veryDarkBlue: hsl(235, 21%, 11%);
+$veryDarkDesaturatedBlue: hsl(235, 24%, 19%);
+$lightGrayishBlue: hsl(234, 39%, 85%);
+$lightGrayishBlueHover: hsl(236, 33%, 92%);
+$darkGrayishBlue: hsl(234, 11%, 52%);
+$veryDarkGrayishBlue: hsl(233, 14%, 35%);
+$veryDarkGrayishBlueSecond: hsl(237, 14%, 26%);
+
+main {
+  min-height: 100vh;
+
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  display: flex;
+  justify-content: center;
+}
+
+.app {
+  flex: 1;
+  max-width: 700px;
+  color: white;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 5vh;
+
+    button {
+      background: none;
+      cursor: pointer;
+      border: none;
+    }
+  }
+
+  form {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    height: 2rem;
+
+    .text-input {
+      padding: 0;
+
+      width: 100%;
+      font-size: 18px;
+      font-family: "Josefin Sans", sans-serif;
+      border: none;
+      outline: none;
+      background: none;
+
+      &::placeholder {
+        font-family: "Josefin Sans", sans-serif;
+        font-size: 18px;
+      }
+    }
+  }
+
+  &-item:first-of-type {
+    border-radius: 8px 8px 0 0;
+  }
+
+  &-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: hsl(234, 39%, 85%);
+    padding: 10px;
+    border-bottom: 0.5px solid $veryDarkGrayishBlue;
+    min-height: 2rem;
+    cursor: pointer;
+
+    &:hover {
+      button {
+        visibility: visible;
+      }
+    }
+
+    &-main {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .task-text {
+      word-break: break-all;
+    }
+    .task-complete {
+      text-decoration: line-through;
+      color: $darkGrayishBlue;
+    }
+
+    .btn-close {
+      background: none;
+      border: none;
+      cursor: pointer;
+      visibility: hidden;
+    }
+  }
+
+  .checkbox {
+    width: 1.3em;
+    min-width: 1.3em;
+    height: 1.3em;
+    background: none;
+    border-radius: 50%;
+    vertical-align: middle;
+
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+
+    &:checked {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &::after {
+        content: url("../public/images/icon-check.svg");
+      }
+    }
+  }
+
+  .footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 10px;
+    border-radius: 0 0 8px 8px;
+    height: 2rem;
+    box-shadow: 0px 18px 20px 1px rgba(0, 0, 0, 0.071);
+
+    .items-count {
+      color: $veryDarkGrayishBlue;
+      font-size: small;
+    }
+
+    .current-scope {
+      color: $brightBlue;
+    }
+
+    button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: $darkGrayishBlue;
+      font-size: 18px;
+      font-family: "Josefin Sans", sans-serif;
+    }
+  }
+
+  .mobile-scopes {
+    display: none;
+  }
+
+  .drag-text {
+    padding: 4rem;
+    text-align: center;
+    color: $darkGrayishBlue;
+  }
+}
+
+.dark-mode {
+  main {
+    background-image: url("../public/images/bg-desktop-dark.jpg");
+    background-color: $veryDarkBlue;
+  }
+
+  .app {
+    form {
+      background-color: $veryDarkDesaturatedBlue;
+
+      .text-input {
+        color: white;
+
+        &::placeholder {
+          color: white;
+        }
+      }
+    }
+
+    &-item {
+      background-color: $veryDarkDesaturatedBlue;
+    }
+
+    .checkbox {
+      border: 2px solid $veryDarkGrayishBlueSecond;
+
+      &:hover {
+        background: linear-gradient(
+              $veryDarkDesaturatedBlue,
+              $veryDarkDesaturatedBlue
+            )
+            padding-box,
+          linear-gradient(120deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%))
+            border-box;
+
+        border: 2px solid transparent;
+      }
+
+      &:checked {
+        background: linear-gradient(
+          120deg,
+          hsl(192, 100%, 67%),
+          hsl(280, 87%, 65%)
+        );
+
+        border: none;
+      }
+    }
+
+    .footer {
+      background-color: $veryDarkDesaturatedBlue;
+
+      button {
+        &:hover {
+          color: $lightGrayishBlueHover;
+        }
+      }
+    }
+
+    .mobile-scopes {
+      background-color: $veryDarkDesaturatedBlue;
+
+      button {
+        &:hover {
+          color: $lightGrayishBlueHover;
+        }
+      }
+    }
+  }
+}
+
+.light-mode {
+  main {
+    background-image: url("../public/images/bg-desktop-light.jpg");
+    background-color: $veryLightGray;
+  }
+
+  .app {
+    form {
+      background-color: white;
+
+      .text-input {
+        color: black;
+
+        &::placeholder {
+          color: black;
+        }
+      }
+    }
+
+    &-item {
+      background-color: white;
+      color: hsl(235, 19%, 35%);
+    }
+
+    .checkbox {
+      border: 2px solid $lightGrayishBlue;
+
+      &:hover {
+        background: linear-gradient(white, white) padding-box,
+          linear-gradient(120deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%))
+            border-box;
+
+        border: 2px solid transparent;
+      }
+
+      &:checked {
+        background: linear-gradient(
+          120deg,
+          hsl(192, 100%, 67%),
+          hsl(280, 87%, 65%)
+        );
+
+        border: none;
+      }
+    }
+
+    .footer {
+      background-color: white;
+
+      button {
+        &:hover {
+          color: black;
+        }
+      }
+    }
+
+    .mobile-scopes {
+      background-color: white;
+
+      button {
+        &:hover {
+          color: black;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .dark-mode {
+    main {
+      background-image: url("../public/images/bg-mobile-dark.jpg");
+    }
+  }
+
+  .light-mode {
+    main {
+      background-image: url("../public/images/bg-mobile-light.jpg");
+    }
+  }
+
+  .app {
+    max-width: min(90%, 700px);
+    width: 700px;
+    min-width: 0;
+
+    .header {
+      padding-top: 0;
+    }
+
+    .desk-scopes {
+      display: none;
+    }
+
+    .mobile-scopes {
+      display: flex;
+      gap: 1rem;
+
+      padding: 10px;
+      border-radius: 8px;
+      justify-content: center;
+      margin-top: 1rem;
+      height: 2rem;
+
+      .current-scope {
+        color: $brightBlue;
+      }
+
+      button {
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: $darkGrayishBlue;
+        font-size: 18px;
+        font-family: "Josefin Sans", sans-serif;
+      }
+    }
+  }
+}
