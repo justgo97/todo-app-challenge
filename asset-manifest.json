@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/todo-app-challenge/static/css/main.7f347603.css",
+    "main.js": "/todo-app-challenge/static/js/main.b2fa9fb9.js",
+    "static/js/787.0597914a.chunk.js": "/todo-app-challenge/static/js/787.0597914a.chunk.js",
+    "static/media/bg-desktop-light.jpg": "/todo-app-challenge/static/media/bg-desktop-light.3508d620efd5a52bb4ce.jpg",
+    "static/media/bg-desktop-dark.jpg": "/todo-app-challenge/static/media/bg-desktop-dark.73e47dbb723ebc772ef0.jpg",
+    "index.html": "/todo-app-challenge/index.html",
+    "static/media/icon-check.svg": "/todo-app-challenge/static/media/icon-check.a8fb15d0278c8e312df5.svg",
+    "main.7f347603.css.map": "/todo-app-challenge/static/css/main.7f347603.css.map",
+    "main.b2fa9fb9.js.map": "/todo-app-challenge/static/js/main.b2fa9fb9.js.map",
+    "787.0597914a.chunk.js.map": "/todo-app-challenge/static/js/787.0597914a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7f347603.css",
+    "static/js/main.b2fa9fb9.js"
+  ]
+}
