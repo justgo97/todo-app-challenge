@@ -48,7 +48,7 @@ Mobile light:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/todo-app-DRacpvoqZn](https://www.frontendmentor.io/solutions/todo-app-DRacpvoqZn)
 - Live Site URL: [https://justgo97.github.io/todo-app-challenge/](https://justgo97.github.io/todo-app-challenge/)
 
 ## My process
