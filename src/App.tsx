@@ -151,7 +151,9 @@ function App() {
           <h1>T O D O</h1>
           <button onClick={onClickThemeButton}>
             <img
-              src={darkMode ? "/images/icon-sun.svg" : "/images/icon-moon.svg"}
+              src={
+                darkMode ? "./images/icon-sun.svg" : "./images/icon-moon.svg"
+              }
               alt=""
             />
           </button>
