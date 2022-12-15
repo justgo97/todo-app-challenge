@@ -331,6 +331,7 @@ function TodoBasic({
               type="checkbox"
               checked={todoStatus}
               onChange={(event) => onChangeInput(event, todoID)}
+              aria-label="Task status"
             />
             <span
               className={`task-text ${
