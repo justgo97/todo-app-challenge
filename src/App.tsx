@@ -160,7 +160,7 @@ function App() {
               src={
                 darkMode ? "./images/icon-sun.svg" : "./images/icon-moon.svg"
               }
-              alt=""
+              alt="theme switch"
             />
           </button>
         </div>
@@ -287,6 +287,7 @@ function TodoForm({ addTodoItem }: any) {
         type="checkbox"
         checked={todoStatus}
         onChange={onChangeStatus}
+        aria-label="Task status"
       />
       <input
         onChange={onChangeText}
